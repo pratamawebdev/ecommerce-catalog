@@ -1,0 +1,388 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --dark-blue: #002772;
+  --light-blue: #d6e6ff;
+  --dark-pink: #720060;
+  --light-pink: #fde2ff;
+  --black: #1e1e1e;
+  --white: #ffffff;
+  --light-gray: #dcdcdc;
+  --dark-gray: #3f3f3f;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-load {
+  background: linear-gradient(180deg, var(--light-gray) 65%, var(--white) 50%);
+}
+
+.card {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 80.65%;
+  height: 69.71%;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 56px 48px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.load {
+  display: grid;
+  gap: 16px;
+}
+
+.load-thumbnail {
+  height: 100%;
+  width: 100%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.load-details {
+  width: 97%;
+}
+
+.load-text-details {
+  height: 75%;
+}
+
+.load-text-title {
+  width: 100%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  height: 20%;
+}
+
+.load-text-sub-title {
+  height: 10%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.load-category {
+  width: 25%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.load-rating {
+  width: 25%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.load-text-description {
+  width: 100%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  height: 45%;
+  margin-top: 16px;
+}
+
+.load-details-action {
+  width: 100%;
+  height: 20%;
+  margin-top: 24px;
+}
+
+.load-price {
+  width: 30%;
+  height: 35%;
+  margin-top: 16px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.load-cta {
+  height: 48%;
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.load-cta-buy,
+.load-cta-next {
+  width: 50%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.bg-men-color {
+  background: linear-gradient(180deg, var(--light-blue) 65%, var(--white) 50%);
+}
+
+.bg-women-color {
+  background: linear-gradient(180deg, var(--light-pink) 65%, var(--white) 50%);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-navy {
+  background-color: var(--dark-blue);
+}
+
+.bg-magenta {
+  background-color: var(--dark-pink);
+}
+
+.product-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100%;
+}
+
+.overlay,
+.overlay > img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: -12%;
+  left: 0;
+}
+
+.product-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image > img {
+  width: 70%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.product-text {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-text .title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title h4 {
+  font-size: 80%;
+  font-weight: 600;
+}
+
+.product-text .sub-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 14px;
+  font-size: 16px;
+  color: var(--black);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.product-text .rating {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rating > .circle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+}
+
+.rating > .circleborder {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  border: 1px solid;
+}
+
+.product-text .description {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--black);
+}
+
+.description p {
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.product-text > .action {
+  padding-top: 16px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.product-text .price {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.product-unavailable-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-unavailable-container > .overlay {
+  top: 10%;
+  left: 5%;
+}
+
+.product-unavailable-container > .product-text {
+  text-align: center;
+  z-index: 2;
+}
+
+.product-unavailable-container .cta-next:hover {
+  color: var(--white);
+  background-color: var(--black);
+  border: none;
+}
+
+.product-unavailable-container .cta-next {
+  margin: 0 auto;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.cta {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.cta > .cta-buy {
+  color: var(--white);
+  border: none;
+}
+
+.cta > .cta-next {
+  background-color: var(--white);
+}
+
+.btn-buy-men {
+  color: var(--white);
+  border: none;
+}
+
+.btn-buy-men:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  border: 2px solid var(--dark-blue);
+}
+
+.btn-buy-women {
+  color: var(--white);
+  border: none;
+}
+
+.btn-buy-women:hover {
+  color: var(--dark-pink);
+  background-color: var(--white);
+  border: none;
+  border: 2px solid var(--dark-pink);
+}
+
+.btn-men {
+  background-color: var(--white);
+}
+
+.btn-men:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: none;
+}
+
+.btn-women {
+  background-color: var(--white);
+}
+
+.btn-women:hover {
+  background-color: var(--dark-pink);
+  color: var(--white);
+  border: none;
+}
+
+.cta > .cta-buy,
+.cta > .cta-next {
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.font-men {
+  color: var(--dark-blue);
+}
+
+.font-women {
+  color: var(--dark-pink);
+}
+
+.border-men {
+  border: 2px solid var(--dark-blue);
+}
+
+.border-women {
+  border: 2px solid var(--dark-pink);
+}
+
+@keyframes pulse {
+  0%,
+  to {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
